@@ -1,0 +1,29 @@
+{
+  "name": "bible-agent",
+  "type": "mcp-server",
+  "payment": {
+    "wallet": "${X402_WALLET}",
+    "network": "eip155:8453",
+    "token": "USDC",
+    "facilitator": "https://facilitator.x402.dev"
+  },
+  "pricing": {
+    "default": "0.005",
+    "routes": {
+      "tool:search-verse": "0.005",
+      "tool:find-mentions": "0.005",
+      "tool:cross-reference": "0.010",
+      "tool:strongs-word": "0.005"
+    }
+  },
+  "discovery": {
+    "enabled": true,
+    "instructions": "Bible study agent. Access indexed Bible translations, Strong's concordance, and cross-references via payment."
+  },
+  "deployment": {
+    "platform": "self-hosted",
+    "env": {
+      "X402_WALLET": "${X402_WALLET}"
+    }
+  }
+}
